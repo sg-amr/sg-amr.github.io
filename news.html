@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Team&#160Amorphous公式サイト</title>
+    <meta name="description" content="チームアモルファスによるホームページ">    
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/base.css">
+  </head>
+  <body>
+　　<div id="header"></div>
+    <main>
+      <!--内容をここに書く-->
+      <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <div id="comments"></div>
+    <script>
+        d3.csv("https://docs.google.com/spreadsheets/d/1pMgMY4bVppUr1ljtIHg3bZrtznm1AYn3uM5uQKaDCZA/export?format=csv&range=A3:D", function(error, data){
+	    var text = "";
+	    for(var i=0; i<data.length; i++){
+		    text += i+1 + " 名前: <a href=\"mailto:" + data[i].Mail + "\">" + data[i].Name + "</a> " + data[i].Timestamp + "<pre>" + data[i].Comments + "</pre>";
+	    }
+	    d3.select("#comments").html(text);
+    });
+    </script>
+    </main>
+    <div id="footer"></div>
+    <script>
+      fetch("base_header.html")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#header").innerHTML = data);
+      fetch("base_footer.html")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#footer").innerHTML = data);
+    </script>
+  </body>
+</html>
