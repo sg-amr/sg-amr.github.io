@@ -1,7 +1,7 @@
 /*このcss：サイトの共通部分（つまり、headerとfooter）のためのもの*/
 .header{
-    background-image: url(../image/amorphous.jpg);
-    background-position: right;
+    background-image: url(../image/数式.png);
+    background-position: left;
     background-color: rgba(255, 255, 255, 0.562);
     background-repeat: no-repeat;
     width: auto;
@@ -32,10 +32,11 @@ header{
   
   /* ハンバーガーアイコンの設置スペース */
   .drawer_open {
+    background-color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     right: 5px;
     z-index: 100;/* 重なり順を一番上にする */
     cursor: pointer;
