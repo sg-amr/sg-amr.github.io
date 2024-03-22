@@ -104,6 +104,7 @@ header{
   }
   
   .Hamburger-Menu_item a {
+    font-size: 40px;
     margin: 10px;
     padding: 1px;
     color: #ffffff;
