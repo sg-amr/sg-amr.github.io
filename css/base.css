@@ -123,10 +123,10 @@ a{
     text-decoration: none;
 }
 a:link{
-    color:blue;
+    color:rgb(129, 232, 149);
 }
 a:visited{
-    color:blue;
+    color:rgb(250, 128, 199);
 }
 a:hover{
     color:black;
