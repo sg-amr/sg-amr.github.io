@@ -1,5 +1,6 @@
 /*このcss：サイトの共通部分（つまり、headerとfooter）のためのもの*/
-.header{
+/* ヘッダー */
+  .header{
     background-image: url(../image/数式.png);
     background-position: left;
     background-color: rgba(255, 255, 255, 0.562);
@@ -7,134 +8,132 @@
     width: auto;
     height: 115px;
     color: #333;
-}
-header p{
+  }
+  header p{
     text-align: right;
-}
-.title_box{
+  }
+  .title_box{
     text-align: center;
     margin: 5em;
     background-color: #ccc;
-}
+  }
+  /*ハンバーガーメニュー */
+    /* チェックボックスを非表示にする */
+    .drawer_hidden {
+      display: none;
+    }
+
+    /* ハンバーガーアイコンの設置スペース */
+    .drawer_open {
+      background-color: whitesmoke;
+     display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      right: 5px;
+      z-index: 100;/* 重なり順を一番上にする */
+     cursor: pointer;
+     padding: 30px;
+    }
+  
+    /* ハンバーガーメニューのアイコン */
+    .drawer_open span,
+    .drawer_open span:before,
+    .drawer_open span:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 25px;
+      border-radius: 3px;
+      background: #333;
+      transition: 0.5s;
+      position: absolute;
+    }
+  
+    /* 三本線の一番上の棒の位置調整 */
+    .drawer_open span:before {
+      bottom: 8px;
+    }
+  
+    /* 三本線の一番下の棒の位置調整 */
+    .drawer_open span:after {
+      top: 8px;
+    }
+  
+    /* アイコンがクリックされたら真ん中の線を透明にする */
+    #drawer_input:checked ~ .drawer_open span {
+      background: rgba(255, 255, 255, 0);
+    }
+  
+    /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+    #drawer_input:checked ~ .drawer_open span::before {
+      bottom: 0;
+      transform: rotate(45deg);
+    }
+  
+    #drawer_input:checked ~ .drawer_open span::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+    
+    /* メニューのデザイン*/
+    .Hamburger-Menu_content {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      bottom: 100%;
+      left: 0%; /* メニューを画面の外に飛ばす */
+      z-index: 99;
+      background: rgb(179, 130, 225);
+      transition: .5s;
+      text-align: center;
+      padding-top: 20px;
+      size: 15px;
+    }
+  
+    /* メニュー黒ポチを消す */
+    .Hamburger-Menu_list {
+      list-style: none;
+    }
+  
+    .Hamburger-Menu_item a {
+      font-size: 40px;
+      margin: 10px;
+      padding: 1px;
+      color: #ffffff;
+      background-color: rgb(50, 149, 149);
+      text-decoration: none;
+    }
+  
+    /* アイコンがクリックされたらメニューを表示 */
+    #drawer_input:checked ~ .Hamburger-Menu_content {
+      bottom: 0;/* メニューを画面に入れる */
+    
+    }
+  /*ハンバーガーメニュー終わり*/
+/*ヘッダー終わり*/
 main{
   background-color: #cdd692dc;
 }
-footer{
-  background-color: rgb(96, 127, 55);
-}
-header{
-  background-color: rgba(0, 187, 255, 0.282);
-}
-/* チェックボックスを非表示にする */
-.drawer_hidden {
-    display: none;
+/*フッター */
+  footer{
+    background-color: rgb(96, 127, 55);
   }
-  
-  /* ハンバーガーアイコンの設置スペース */
-  .drawer_open {
-    background-color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    right: 5px;
-    z-index: 100;/* 重なり順を一番上にする */
-    cursor: pointer;
-    padding: 30px;
-  }
-  
-  /* ハンバーガーメニューのアイコン */
-  .drawer_open span,
-  .drawer_open span:before,
-  .drawer_open span:after {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 25px;
-    border-radius: 3px;
-    background: #333;
-    transition: 0.5s;
-    position: absolute;
-  }
-  
-  /* 三本線の一番上の棒の位置調整 */
-  .drawer_open span:before {
-    bottom: 8px;
-  }
-  
-  /* 三本線の一番下の棒の位置調整 */
-  .drawer_open span:after {
-    top: 8px;
-  }
-  
-  /* アイコンがクリックされたら真ん中の線を透明にする */
-  #drawer_input:checked ~ .drawer_open span {
-    background: rgba(255, 255, 255, 0);
-  }
-  
-  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
-  #drawer_input:checked ~ .drawer_open span::before {
-    bottom: 0;
-    transform: rotate(45deg);
-  }
-  
-  #drawer_input:checked ~ .drawer_open span::after {
-    top: 0;
-    transform: rotate(-45deg);
-  }
-    
-  /* メニューのデザイン*/
-  .Hamburger-Menu_content {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    bottom: 100%;
-    left: 0%; /* メニューを画面の外に飛ばす */
-    z-index: 99;
-    background: rgb(179, 130, 225);
-    transition: .5s;
-    text-align: center;
-    padding-top: 20px;
-    size: 15px;
-  }
-  
-  /* メニュー黒ポチを消す */
-  .Hamburger-Menu_list {
-    list-style: none;
-  }
-  
-  .Hamburger-Menu_item a {
-    font-size: 40px;
-    margin: 10px;
-    padding: 1px;
-    color: #ffffff;
-    background-color: rgb(50, 149, 149);
-    text-decoration: none;
-  }
-  
-  /* アイコンがクリックされたらメニューを表示 */
-  #drawer_input:checked ~ .Hamburger-Menu_content {
-    bottom: 0;/* メニューを画面に入れる */
-    
-  }
-.footer{
-    background-color: rgb(171, 224, 180);
-}
 /*リンクのデザイン関係*/
-a{
+  a{
     text-decoration: none;
-}
-a:link{
+  }
+  a:link{
     color:rgb(129, 232, 149);
-}
-a:visited{
+  }
+  a:visited{
     color:rgb(250, 128, 199);
-}
-a:hover{
+  }
+  a:hover{
     color:black;
     background-color: rgb(189, 189, 255);
-}
-a:active{
+  }
+  a:active{
     color: blueviolet;
-}
+  }
 /*リンクのデザイン関係終わり*/
