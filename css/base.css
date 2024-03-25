@@ -119,6 +119,7 @@ main{
 /*フッター */
   footer{
     background-color: rgb(96, 127, 55);
+    text-align: center;
   }
 /*リンクのデザイン関係*/
   a:hover{
