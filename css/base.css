@@ -121,20 +121,7 @@ main{
     background-color: rgb(96, 127, 55);
   }
 /*リンクのデザイン関係*/
-  a{
-    text-decoration: none;
-  }
-  a:link{
-    color:rgb(129, 232, 149);
-  }
-  a:visited{
-    color:rgb(129, 232, 149);
-  }
   a:hover{
-    color:black;
+    color: #0000ee;
     background-color: rgb(189, 189, 255);
   }
-  a:active{
-    color: blueviolet;
-  }
-/*リンクのデザイン関係終わり*/
