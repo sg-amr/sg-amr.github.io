@@ -123,5 +123,5 @@ main{
 /*リンクのデザイン関係*/
   a:hover{
     color: #0000ee;
-    background-color: rgb(189, 189, 255);
+    background-color: rgba(189, 255, 221, 0.677);
   }
