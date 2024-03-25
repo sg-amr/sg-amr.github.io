@@ -17,13 +17,13 @@
 	<meta charset="utf-8">
 	<title>Team Amorphous公式サイト</title>
 	<!--＊-検索したとき出る説明を設定-->
-	<meta content="これまでのお知らせを全て表示しています。">
+	<meta content="参考文献をまとめています。">
 	
 	<!--cssを読み込み-->
 	<!--共通部分のcssを読み込み・共通部分のcssはmain内はbackground-colorのみ設定しているので、競合することはないと思われる。-->
 	<link rel="stylesheet" href="css/base.css"><!--相対参照注意-->
 	<!--＊-このページ独自のcssを読み込み／cssはcssフォルダに追加するようにしてください。-->
-	<link rel="stylesheet" href="css/news.css"><!--相対参照注意-->
+	<link rel="stylesheet" href="css/link.css"><!--相対参照注意-->
 	
 </head>
 <body>
@@ -32,17 +32,7 @@
 
 	<main>
 		<!--＊内容-->
-		<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <div id="comments"></div>
-    <script>
-        d3.csv("https://docs.google.com/spreadsheets/d/1pMgMY4bVppUr1ljtIHg3bZrtznm1AYn3uM5uQKaDCZA/export?format=csv&range=A3:D", function(error, data){
-	    var text = "";
-	    for(var i=0; i<data.length; i++){
-		    text += "<div class=\"timestamp\"><p>" + data[i].Timestamp +"</p></div>" + data[i].Comments ;
-	    }
-	    d3.select("#comments").html(text);
-    });
-    </script>
+		
 		<!--内容終わり-->
 	</main>
 

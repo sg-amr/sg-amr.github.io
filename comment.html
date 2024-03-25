@@ -1,65 +1,90 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Team&#160Amorphous公式サイト</title>
-    <meta name="description" content="チームアモルファスによるホームページ">    
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/comment.css">
-    <link rel="stylesheet" href="css/base.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<!-- Google analysis tag-このページを解析するためのもの-->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SMQ27CJKDV"></script>
+	<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'G-SMQ27CJKDV');
+	</script>
+	<!--Google tag finish>
+	<!--google analysis tag終わり-->
+	
+	<!--文字コードと、検索された時の設定-->
+	<meta charset="utf-8">
+	<title>Team Amorphous公式サイト</title>
+	<!--＊-検索したとき出る説明を設定-->
+	<meta content="コメント機能-訂正などあれば、お願いします。">
+	
+	<!--cssを読み込み-->
+	<!--共通部分のcssを読み込み・共通部分のcssはmain内はbackground-colorのみ設定しているので、競合することはないと思われる。-->
+	<link rel="stylesheet" href="css/base.css"><!--相対参照注意-->
+	<!--＊-このページ独自のcssを読み込み／cssはcssフォルダに追加するようにしてください。-->
+	<link rel="stylesheet" href="css/comment.css"><!--相対参照注意-->
+	
 </head>
-  <body>
-    <div id="header"></div>
-    <main>
-      <!--内容をここに書く-->
-      <!--コメント-->
-      <form action="https://docs.google.com/forms/d/e/1FAIpQLSc6b0VxQLr-qL0nGfzbtyG31HCzBjLRHM6FKVVc5BWDVEnwQw/formResponse" target="hidden_iframe" method="post" onsubmit="return test(this.wcheck.value)">
-        <p><input name="entry.1877710308" placeholder="名前" value="名無し" required></p>
-        <p><input name="entry.1903437178" placeholder="メールアドレス" type="email"></p>
-        <p><textarea name="entry.1256968439" placeholder="コメント" rows="10" cols="40" maxlength="400" id="wcheck" required></textarea></p>
-        <input type="submit" id="submitbutton" value="送信">
-        </form>
-        <iframe onload='if(submitted){window.location="";}' id=hidden_iframe name=hidden_iframe style=display:none></iframe>
-        <script type="text/javascript">
-        var NGComments = ["死ね","バカ",".exe"]; // 簡易的なNGワードの設定
-        var regex = new RegExp(NGComments.join("|"));
-        function test(wcheck) {
-          if (wcheck.match(regex) != null) {
-            alert("ERROR: コメントにNGワードが含まれています");
-            return false;
-          }
-          document.getElementById("submitbutton").disabled = true;
-          textareas = document.getElementsByTagName('textarea');
-          for(var i=0 ;i < textareas.length ;i ++ ){
-            textareas[i].value = textareas[i].value.replace( /</g ,'&lt;' );
-          }
-          inputs = document.getElementsByTagName('input');
-          for(var i=0 ;i < inputs.length ;i ++ ){
-            inputs[i].value = inputs[i].value.replace( /</g ,'&lt;' );
-          }
-          return submitted=!0;
-        }
-        </script>
-        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-        <div id="comments"></div>
-        <script>
-        d3.csv("https://docs.google.com/spreadsheets/d/1jdbFsO5gAuZ5uYl7YbAQmNToRz2K64a4AHDYtNf5yP0/export?format=csv&range=A3:D", function(error, data){
-          var text = "";
-          for(var i=0; i<data.length; i++){
-            text += i+1 + " 名前: <a href=\"mailto:" + data[i].Mail + "\">" + data[i].Name + "</a> " + data[i].Timestamp + "<pre>" + data[i].Comment + "</pre>";
-          }
-          d3.select("#comments").html(text);
-        });
-        </script>
-    </main>
-    <div id="footer"></div>
-    <script>
-      fetch("base_header.html")
+<body>
+	<div id="header"></div>
+	<!--後のjsでここに、base_header.htmlを読み込み、追加する-->
+
+	<main>
+		<!--＊内容-->
+		<!--コメント-->
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSc6b0VxQLr-qL0nGfzbtyG31HCzBjLRHM6FKVVc5BWDVEnwQw/formResponse" target="hidden_iframe" method="post" onsubmit="return test(this.wcheck.value)">
+  <p><input name="entry.1877710308" placeholder="名前" value="名無し" required></p>
+  <p><input name="entry.1903437178" placeholder="メールアドレス" type="email"></p>
+  <p><textarea name="entry.1256968439" placeholder="コメント" rows="10" cols="40" maxlength="400" id="wcheck" required></textarea></p>
+  <input type="submit" id="submitbutton" value="送信">
+  </form>
+  <iframe onload='if(submitted){window.location="";}' id=hidden_iframe name=hidden_iframe style=display:none></iframe>
+  <script type="text/javascript">
+  var NGComments = ["死ね","バカ",".exe"]; // 簡易的なNGワードの設定
+  var regex = new RegExp(NGComments.join("|"));
+  function test(wcheck) {
+    if (wcheck.match(regex) != null) {
+      alert("ERROR: コメントにNGワードが含まれています");
+      return false;
+    }
+    document.getElementById("submitbutton").disabled = true;
+    textareas = document.getElementsByTagName('textarea');
+    for(var i=0 ;i < textareas.length ;i ++ ){
+      textareas[i].value = textareas[i].value.replace( /</g ,'&lt;' );
+    }
+    inputs = document.getElementsByTagName('input');
+    for(var i=0 ;i < inputs.length ;i ++ ){
+      inputs[i].value = inputs[i].value.replace( /</g ,'&lt;' );
+    }
+    return submitted=!0;
+  }
+  </script>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  <div id="comments"></div>
+  <script>
+  d3.csv("https://docs.google.com/spreadsheets/d/1jdbFsO5gAuZ5uYl7YbAQmNToRz2K64a4AHDYtNf5yP0/export?format=csv&range=A3:D", function(error, data){
+    var text = "";
+    for(var i=0; i<data.length; i++){
+      text += i+1 + " 名前: <a href=\"mailto:" + data[i].Mail + "\">" + data[i].Name + "</a> " + data[i].Timestamp + "<pre>" + data[i].Comment + "</pre>";
+    }
+    d3.select("#comments").html(text);
+  });
+  </script>
+  <!--コメント終わり-->
+		<!--内容終わり-->
+	</main>
+
+	<div id="footer"></div>
+	<!--後のjsでここに、base_footer.htmlを読み込み、追加する-->
+</body>
+<!--base_header.htmlとbase_footer.htmlを読み込み、#headerと#footerに反映するjs-->
+<script>
+      fetch("base_header.html")//＊相対参照注意
         .then((response) => response.text())
         .then((data) => document.querySelector("#header").innerHTML = data);
-      fetch("base_footer.html")
+      fetch("base_footer.html")//＊相対参照注意
         .then((response) => response.text())
         .then((data) => document.querySelector("#footer").innerHTML = data);
-    </script>
-  </body>
+</script>
 </html>

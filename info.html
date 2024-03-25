@@ -1,26 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Team&#160Amorphous公式サイト</title>
-    <meta name="description" content="チームアモルファスによるホームページ">    
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/info.css">
-    <link rel="stylesheet" href="css/base.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<!-- Google analysis tag-このページを解析するためのもの-->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SMQ27CJKDV"></script>
+	<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'G-SMQ27CJKDV');
+	</script>
+	<!--Google tag finish>
+	<!--google analysis tag終わり-->
+	
+	<!--文字コードと、検索された時の設定-->
+	<meta charset="utf-8">
+	<title>Team Amorphous公式サイト</title>
+	<!--＊-検索したとき出る説明を設定-->
+	<meta content="Amorphousについての詳しい情報">
+	
+	<!--cssを読み込み-->
+	<!--共通部分のcssを読み込み・共通部分のcssはmain内はbackground-colorのみ設定しているので、競合することはないと思われる。-->
+	<link rel="stylesheet" href="css/base.css"><!--相対参照注意-->
+	<!--＊-このページ独自のcssを読み込み／cssはcssフォルダに追加するようにしてください。-->
+	<link rel="stylesheet" href="css/info.css"><!--相対参照注意-->
+	
 </head>
-  <body>
-    <div id="header"></div>
-    <main>
-      <!--内容をここに書く-->
-    </main>
-    <div id="footer"></div>
-    <script>
-      fetch("base_header.html")
+<body>
+	<div id="header"></div>
+	<!--後のjsでここに、base_header.htmlを読み込み、追加する-->
+
+	<main>
+		<!--＊内容-->
+		<h3>ここではTeam&#160Amorphousについての紹介を行なっています。</h3>
+
+<div class="outline">
+<p>Team&#160Amorphousは現在高校一年生の学生のみで構成される学術オリンピックを目指すためのグループです。</p>
+<h4>活動内容</h4>
+<p>Amorphousは学術オリンピックへの勉強および、広告活動をメインに活動しています。<br>
+現在は物理チャレンジの実験課題・化学グランプリの勉強などに取り組んでいます。<br>
+また、このサイトおよび<a href="https://twitter.com/SgAmorphou80065">X</a>を広告活動として、行なっています。<br>
+</p>
+</div>
+
+<div class="purpose">
+<h4>活動の目的</h4>
+<p>メインの目的はもちろん学術オリンピックの合格です。<br>
+しかし、同じ高校にいるメンバーだけでは少なく、同じような考えを持っている人とたくさん繋がりたいなと思い広告活動も行なっています。<br>
+<b>現在メンバーを募集しています！</b><br>
+メンバーについて、興味を少しでも持たれた方は<a href="https://twitter.com/SgAmorphou80065">公式X</a>のDMからお願いします！
+</p>
+</div>
+		<!--内容終わり-->
+	</main>
+
+	<div id="footer"></div>
+	<!--後のjsでここに、base_footer.htmlを読み込み、追加する-->
+</body>
+<!--base_header.htmlとbase_footer.htmlを読み込み、#headerと#footerに反映するjs-->
+<script>
+      fetch("base_header.html")//＊相対参照注意
         .then((response) => response.text())
         .then((data) => document.querySelector("#header").innerHTML = data);
-      fetch("base_footer.html")
+      fetch("base_footer.html")//＊相対参照注意
         .then((response) => response.text())
         .then((data) => document.querySelector("#footer").innerHTML = data);
-    </script>
-  </body>
+</script>
 </html>
