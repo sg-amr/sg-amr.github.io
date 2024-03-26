@@ -17,8 +17,8 @@
   .title_box{
     text-align: center;
     background-color: rgba(45, 255, 42, 0.365);
+    margin: 0 auto;
     position: absolute;
-    left: 0px;
     top: 0px
   }
   /*ハンバーガーメニュー */
