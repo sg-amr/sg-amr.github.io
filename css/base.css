@@ -17,8 +17,9 @@
   .title_box{
     text-align: center;
     background-color: rgba(45, 255, 42, 0.365);
-    position: relative; /* 今の位置を基準 */
-    bootom:  20px;
+    position: absolute;
+    left: 0px;
+    top: 0px
   }
   /*ハンバーガーメニュー */
     /* チェックボックスを非表示にする */
