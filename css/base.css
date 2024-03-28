@@ -12,12 +12,14 @@
     color: #333;
   }
   header p{
-    text-align: right;
+    text-align: left
   }
   .title_box{
     text-align: center;
-    margin: 5em;
     background-color: rgba(45, 255, 42, 0.365);
+    margin: 0 auto;
+    position: absolute;
+    top: 0px
   }
   /*ハンバーガーメニュー */
     /* チェックボックスを非表示にする */
