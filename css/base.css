@@ -14,10 +14,8 @@
   .title_box{
     text-align: center;
     background-color: rgba(45, 255, 42, 0.365);
-    
-    position: absolute;
-    top: 0px
   }
+  
   /*ハンバーガーメニュー */
     /* チェックボックスを非表示にする */
     .drawer_hidden {
