@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google analysis tag-このページを解析するためのもの-->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SMQ27CJKDV"></script>
+	<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'G-SMQ27CJKDV');
+	</script>
+	<!--Google tag finish>
+	<!--google analysis tag終わり-->
+	
+	<!--文字コードと、検索された時の設定-->
+	<meta charset="utf-8">
+	<title>Team Amorphous公式サイト-ブログ</title>
+	<!--＊-検索したとき出る説明を設定-->
+	<meta content="">
+	
+	<!--cssを読み込み-->
+	<!--共通部分のcssを読み込み・共通部分のcssはmain内はbackground-colorのみ設定しているので、競合することはないと思われる。-->
+	<link rel="stylesheet" href="../../css/base.css"><!--相対参照注意-->
+	<!--＊-このページ独自のcssを読み込み・cssはcssフォルダに追加するようにしてください。-->
+	<link rel="stylesheet" href="../../css/blog-sonneko-0001.css"><!--相対参照注意-->
+	
+	<!--モバイル対応にする-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<style>
+		.title_box{
+			background-color: rgba(197,255,191,0.49);
+			text-align: center;
+		}
+		.series_outline{
+			background-color: rgba(84,255,69,0.49);
+			box-shadow: 12px 12px 31px -22px #777777;
+			border-radius: 12px;
+			margin: 0px;
+			padding: 10px;
+			margin: 5px 20px;
+		}
+		.content_table, .content-remember{
+			background-color: rgba(241,222,158,0.63);
+			box-shadow: 12px 12px 31px -22px #777777;
+			border-radius: 12px;
+			margin: 5px 10px;
+			padding: 10px;
+		}
+		.content h2{
+			background-color: rgba(241,222,158,0.63);
+			box-shadow: 12px 12px 31px -22px #777777;
+			border-radius: 1222px;
+			padding: 5px 20px;
+			margin: 60px 5px 5px 5px;
+		}
+		.content-locate_expla-parent{
+			width: 80%;
+			margin: 20px 30px;
+		}
+		h3{
+			border-bottom: solid 3px blue;
+			margin: 50px 20px 5px 5px;
+			padding: 0px 0px 5px 10px;
+		}
+		h4{
+			padding: 5px;
+			border-left: 3px solid #54FF45;
+			background-color: #F4F4F4;
+			margin: 30px 10px 15px 10px
+		}
+		.code_space{
+			background-color: rgb(0,0,0);
+			color: rgb(255,255,255);
+			padding: 25px 25px;
+			border: solid 2px red
+		}
+		.code_output{
+			border: solid 2px red;
+			box-shadow: 5px 5px 10px rgba(0,0,0,0.1) inset;
+			padding: 10px;
+		}
+		main{
+			background-color: rgba(204,232,255,0.10);
+		}
+		p{
+			margin: 20px 10px;
+		}
+		img{
+			width: 100%;
+		}
+		.content-account_expla-website_url_box{
+			background-color: #F4F4F4;
+			margin-left: 30px;
+			border: solid 1px #B5B5B5;
+		}
+	</style>
+	
+</head>
+<body>
+	<div id="header"></div>
+	<!--後のjsでここに、base_header.htmlを読み込み、追加する-->
+
+	<main>
+		<!--＊内容-->
+		<!--タイトル-->
+		<div class="title_box">
+			<h1>プログラミング講座［Webページ編-3日目］</h1>
+		</div>
+		
+		<!--簡単概要-->
+		<div class="outline">
+			<p>プログラミング言語を解説するシリーズの第3回です。今回はcssについてです。</p>
+			<p>このシリーズを読むと、個人ブログ程度の簡単なWebサイトなら作れるようになります。</p>
+			<div class="series_outline">
+				<p>
+					構成；
+					<ul>
+						<li>プログラミング環境作り［Visual Stadio編］</li>
+						<li>コードの書き方［コード編］</li>
+						<li>実際にサイトを公開する［Githubページ編］</li>
+					</ul>
+				</p>
+			</div>
+			<p>筆者がこのサイトを作ったときのことを備忘録として、書いていきます。</p>
+			<p>??????????日更新</p>
+		</div>
+		
+		<hr>
+		
+		<!--目次-->
+		<div class="content_table">
+			<h2>目次</h2>
+			<ul>
+				<li><a href="#way_post">サイトを公開する方法</a></li>
+				<li><a href="#github_expla">GitHabとは？</a></li>
+				<li><a href="#account_expla">アカウントの作成</a></li>
+				<li><a href="#repo_expla">レポジトリとは？</a></li>
+				<li><a href="#commit_way">サイトの公開</a></li>
+			</ul>
+		</div>
+		
+		<!--本物の内容-->
+		<div class="content">
+		<div class="content-way_post">
+			<a name="way_post">
+			<h2>サイトを公開する方法</h2>
+			<p>サイトを公開する方法はたくさんありますが、今回はGitHubページを利用する方法について、紹介します。</p>
+			<p>この方法では完全無料かつ自由度が高いサイトを作ることができます。</p>
+			<p>具体的には、完全に自前のhtmlを使うことができます。</p>
+			<p>唯一できないのは、phpの利用です。</p>
+			<p>意外と簡単に作ることができるので、ぜひ見ていってください。</p>
+		</div>
+		
+		<div class="content-github_expla">
+			<a name="github_expla">
+			<h2>GitHubとは</h2>
+			<p>今回、Webサイトを作るのにGitHabを使うわけですが、GitHabとはなんなのかについて、少し話します。</p>
+			<p> GitHabとは、一言で言うとバージョン管理ツールです。クラウドにコードを保存し、複数人でコード作成をすることができるというものです。</p>
+			<p>コード作成においては、他の人が少し変更しただけできちんと動いていたシステムが動かなくなるかもしれません。なので、変更の履歴（＝バージョン）を自動保存するという機能もついています。</p>
+			<p>GitHabはバージョン管理ツールとしての機能も充実しています。さらに無料で利用することができるので、とても広く使われています。</p>
+			<p>早速、GitHabアカウントを作っていきましょう。</p>
+		</div>
+		
+		<div class="content-account_expla">
+			<a name="account_expla">
+			<h2>アカウントの作成</h2>
+			<p>GitHabを使うためには、アカウントを作る必要があります。</p>
+			<p>まずは、<a href="https://githab.com/">GitHab公式サイト</a>にアクセスしましょう。</p>
+			<p>サインアップを選択します。</p>
+			<img src="../../image/blog-sonneko-0004-content-account_expla-screenshoot_image.jpeg" class="content-account_expla-screenshoot_image">
+			<p>そして、画面の通りにアカウントを作ってください。</p>
+			<p>途中で、GitHabのユーザー名を入力する機会があると思います。<br>作ったWebサイトのURLはそれに依存するので、きちんと考えて決めてください。</p>
+			<div class="content-account_expla-website_url_box"><p>https://[ユーザー名].githab.io/[リポジトリ名]/index.html</p></div>
+			<p>URLは上記のようになります。</p>
+		</div>
+		
+		<div class="content-repo_expla">
+			<a name="repo_expla">
+			<h2>レポジトリとは？</h2>
+			<p>先ほど、リポジトリという単語が出て来ました。これについて、解説します。</p>
+			<p>リポジトリとは、バージョン情報を記録する単位のフォルダで、何かの変更を反映するときはこのレポジトリごと反映されます。</p>
+			<p>リポジトリは2つに分けられます。<br><b>リモートリポジトリ</b>と<b>ローカルリポジトリ</b>です。</p>
+			<p>リモートリポジトリとはクラウド上にあるリポジトリのことで、本物のフォルダです。</p>
+			<p>対し、ローカルリポジトリとは自分のパソコンにあるフォルダのことです。<br>これをエディター（Visual StadioCodeなど）で編集します。</p>
+			<p>ローカルリポジトリの変更をリモートリポジトリに反映する操作のことを「commit」と言います。</p>
+			<p>また、他の人が変更したリモートリポジトリの内容をローカルリポジトリに反映する操作のことを、「fetch」と言います。</p>
+			<img src="../../image/blog-sonneko-0004-content-repo_expla-repo_image.jpeg" class="content-repo_expla-repo_image.jpeg">
+			<p>まとめると、まずリモートリポジトリからローカルリポジトリに反映するためにfetchをして、ファイルを編集した後、ローカルリポジトリにある変更をリモートリポジトリに反映するためにcommitをするということです。</p>
+			<p>また、同時に編集するときは、他人の変更した後に上書き保存することになるため、他人の変更が消えてしまいます。それに対応するのが、mergeです。これは変更を合わせてから保存するという機能です。</p>
+		</div>
+		
+		<div class="content-commit_expla">
+			<a name="commit_expla">
+			<h2>サイトの公開</h2>
+			<p>サイトの公開はとても簡単で、作ったリポジトリ内に自分で作ったhtmlをcommitし、リポジトリ設定のGitHab Pagesのどちらを反映するかという項目をmain&#160branchに設定したら、すでにサイトが完成しています。サイトが更新されるのは長ければ1時間ほどかかるので、気長に待ちましょう。</p>
+			<p>https://[ユーザー名].githab.io/[リポジトリ名]/にアクセスされた場合は自動的に、index.htmlにアクセスされますから、ページのホームをindex.htmlという名前にしておくのをお勧めします。</p>
+		</div>
+		</div>
+		<!--本物の内容終わり-->
+		
+		<!--今回で覚えること-->
+		<div class="content-remember">
+			<h2>今回のまとめ</h2>
+			<ul>
+				<li>GitHabとは、バージョン管理ツールで、無料で利用することができる。</li>
+				<li>GitHabのGitHabページという機能で、自由度の高いWebサイトを作ることができる。</li>
+				<li>リポジトリとは、バージョンを管理するための一単位</li>
+				<li>リポジトリには「リモートリポジトリ」と「ローカルリポジトリ」がある。</li>
+				<li>ローカルリポジトリはパソコンに入っている特殊なフォルダ</li>
+				<li>リモートリポジトリはクラウド上にある本物</li>
+				<li>ローカル→リモートに変更を反映することをcommit</li>
+				<li>リモート→ローカルに変更を反映することをfetchという</li>
+				<li>サイトに反映されるには最長1時間ほどかかるので、気長に</li>
+			</ul>
+		</div>
+		<div class="link">
+			<p>最後まで読んでいただきありがとうございます！</p>
+			<p>次回はhtmlのタグについて解説していきます。</p>
+			<a href="0005.html">次回の記事はこちらから（準備中）</a>
+		</div>
+		<!--内容終わり-->
+	</main>
+
+	<div id="footer"></div>
+	<!--後のjsでここに、base_footer.htmlを読み込み、追加する-->
+</body>
+<!--base_header.htmlとbase_footer.htmlを読み込み、#headerと#footerに反映するjs-->
+<script>
+      fetch("../../base_header.html")//＊相対参照注意
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#header").innerHTML = data);
+      fetch("../../base_footer.html")//＊相対参照注意
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#footer").innerHTML = data);
+</script>
+</html>
