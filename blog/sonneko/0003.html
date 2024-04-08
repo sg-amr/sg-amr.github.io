@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google analysis tag-このページを解析するためのもの-->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SMQ27CJKDV"></script>
+	<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'G-SMQ27CJKDV');
+	</script>
+	<!--Google tag finish>
+	<!--google analysis tag終わり-->
+	
+	<!--文字コードと、検索された時の設定-->
+	<meta charset="utf-8">
+	<title>Team Amorphous公式サイト-ブログ</title>
+	<!--＊-検索したとき出る説明を設定-->
+	<meta content="">
+	
+	<!--cssを読み込み-->
+	<!--共通部分のcssを読み込み・共通部分のcssはmain内はbackground-colorのみ設定しているので、競合することはないと思われる。-->
+	<link rel="stylesheet" href="../../css/base.css"><!--相対参照注意-->
+	<!--＊-このページ独自のcssを読み込み・cssはcssフォルダに追加するようにしてください。-->
+	<link rel="stylesheet" href="../../css/blog-sonneko-0001.css"><!--相対参照注意-->
+	
+	<!--モバイル対応にする-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<style>
+		.title_box{
+			background-color: rgba(197,255,191,0.49);
+			text-align: center;
+		}
+		.series_outline{
+			background-color: rgba(84,255,69,0.49);
+			box-shadow: 12px 12px 31px -22px #777777;
+			border-radius: 12px;
+			margin: 0px;
+			padding: 10px;
+			margin: 5px 20px;
+		}
+		.content_table, .content-remember{
+			background-color: rgba(241,222,158,0.63);
+			box-shadow: 12px 12px 31px -22px #777777;
+			border-radius: 12px;
+			margin: 5px 10px;
+			padding: 10px;
+		}
+		.content h2{
+			background-color: rgba(241,222,158,0.63);
+			box-shadow: 12px 12px 31px -22px #777777;
+			border-radius: 1222px;
+			padding: 5px 20px;
+			margin: 60px 5px 5px 5px;
+		}
+		.content-locate_expla-parent{
+			width: 80%;
+			margin: 20px 30px;
+		}
+		h3{
+			border-bottom: solid 3px blue;
+			margin: 50px 20px 5px 5px;
+			padding: 0px 0px 5px 10px;
+		}
+		h4{
+			padding: 5px;
+			border-left: 3px solid #54FF45;
+			background-color: #F4F4F4;
+			margin: 30px 10px 15px 10px
+		}
+		.code_space{
+			background-color: rgb(0,0,0);
+			color: rgb(255,255,255);
+			padding: 25px 25px;
+			border: solid 2px red
+		}
+		.code_output{
+			border: solid 2px red;
+			box-shadow: 5px 5px 10px rgba(0,0,0,0.1) inset;
+			padding: 10px;
+		}
+		main{
+			background-color: rgba(204,232,255,0.10);
+		}
+		p{
+			margin: 20px 10px;
+		}
+	</style>
+	
+</head>
+<body>
+	<div id="header"></div>
+	<!--後のjsでここに、base_header.htmlを読み込み、追加する-->
+
+	<main>
+		<!--＊内容-->
+		<!--タイトル-->
+		<div class="title_box">
+			<h1>プログラミング講座［Webページ編-3日目］</h1>
+		</div>
+		
+		<!--簡単概要-->
+		<div class="outline">
+			<p>プログラミング言語を解説するシリーズの第3回です。今回はcssについてです。</p>
+			<p>このシリーズを読むと、個人ブログ程度の簡単なWebサイトなら作れるようになります。</p>
+			<div class="series_outline">
+				<p>
+					構成；
+					<ul>
+						<li>プログラミング環境作り［Visual Stadio編］</li>
+						<li>コードの書き方［コード編］</li>
+						<li>実際にサイトを公開する［Githubページ編］</li>
+					</ul>
+				</p>
+			</div>
+			<p>筆者がこのサイトを作ったときのことを備忘録として、書いていきます。</p>
+			<p>??????????日更新</p>
+		</div>
+		
+		<hr>
+		
+		<!--目次-->
+		<div class="content_table">
+			<h2>目次</h2>
+			<ul>
+				<li><a href="#call_css">cssの呼び出し方</a></li>
+				<li><a href="#select_expla">セレクタの書き方</a></li>
+				<li><a href="#color_expla">色の記述</a></li>
+				<li><a href="#locate_expla">配置の記述</a></li>
+				<li><a href="#tag_list">よく使うプロパティ</a></li>
+			</ul>
+		</div>
+		
+		<!--本物の内容-->
+		<div class="content">
+			<div class="content-call_css">
+				<h2>cssの呼び出し方</h2>
+				<a name="call_css">
+				<p>cssには書く場所があります。それについて、紹介します。</p>
+				<p>cssの書く場所には 3通りあり、おすすめは最後に解説する物です。</p>
+				<div class="content-call_css-in_tag">
+					<h3>タグの中に、属性として記述する。</h3>
+					<p>htmlタグの中に、属性としてcssを記述することができます。</p>
+					<div class="code_space">
+						<code>
+							&#60p&#160style="color: red;"&#62赤色になる&#60/p&#62
+						</code>
+					</div>
+					<div class="code_output">
+						<p style="color: red;">赤色になる</p>
+					</div>
+					<p>一番おすすめしたくない方法です。なぜかというと、タグそれぞれにcssを書くと同じものが重複し、見栄えが悪くなるからです。</p>
+					<p>pタグのstyle属性に"color: red;"という値を入れています。</p>
+				</div>
+				<div class="content-call_css-in_head">
+					<h3>headタグ内に記述する</h3>
+					<p>headタグ内のstyleタグ中に、記述する方法です。</p>
+					<div class="code_space">
+						<code>
+							&#60head&#62<br>
+							&#160&#160&#160&#160&#60style&#62<br>
+							&#160&#160&#160&#160&#160&#160&#160&#160p{<br>
+							&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160&#160color:&#160red;<br>
+							&#160&#160&#160&#160&#160&#160&#160&#160}<br>
+							&#160&#160&#160&#160&#60/style&#62<br>
+							&#60/head&#62<br>
+							&#60main&#62<br>
+							&#160&#160&#160&#160&#60p&#62赤色になる&#60/p&#62<br>
+							&#60/main&#62<br>
+						</code>
+					</div>
+					<div class="code_output">
+						<p style="color: red;">赤色になる</p>
+					</div>
+					<p>これもまた、推奨しません。注意したいのはheadタグの中にしか、書いてはいけないことです。</p>
+				</div>
+				<div class="content-call_css-in_file">
+					<h3>cssファイルの中に記述する方法</h3>
+					<p>推奨するやり方です。まずはcss専用のファイルを用意します。</p>
+					<p>そして、適用したいhtmlファイルのheadタグ内に以下を記述します。</p>
+					<div class="code_space">
+						<code>
+							&#60link&#160rel="stylesheet"&#160href="https://******.com/css/******.css"&#62
+						</code>
+					</div>
+					<p>href属性の値はcssのファイルへのリンクを書いてください。</p>
+					<p>そうすると、このhtmlファイルに指定したリンク先のcssが適用されます。複数指定することも可能です。</p>
+				</div>
+			</div>
+			<div class="content-select_expla">
+				<a name="select_expla">
+				<h2>セレクタの書き方</h2>
+				<h3> セレクターとは？</h3>
+				<p>セレクタとは、cssの効果を適応させる範囲の記述のことです。</p>
+				<div class="code_space">
+					<code>
+						[セレクタ]{<br>&#160&#160&#160&#160[設定対象]:&#160[値];<br>}
+					</code>
+				</div>
+				<p>基本の書き方を紹介します。</p>
+				<ul>
+					<li>タグの名前をそのまま</li>
+					<li>クラス名</li>
+					<li>「または」の選択方法</li>
+					<li>「かつ」の選択方法</li>
+				</ul>
+				<h4>タグの名前をそのまま使う</h4>
+				<p>例えば、全てのh1タグに対して、適用させたいなら「h1」がセレクタになります。全てのタグについて、これが使えます。（全選択はmainなど）</p>
+				<div class="code_space">
+					<code>
+						p{<br>&#160&#160&#160&#160color:&#160red;<br>}<br>
+						a{<br>&#160&#160&#160&#160color:&#160yellow;<br>}
+					</code>
+				</div>
+				<div class="code_output">
+					<p style="color: red;">赤色になったpタグの中身</p>
+					<p style="color: yellow;">黄色になったaタグの中身</p>
+				</div>
+				<p>黄色の文字はとても読みにくいですね。薄い色は文字の色に使わないようにしましょう。</p>
+				<h4>クラス名</h4>
+				<p>divタグの属性であるclassを使って、指定できます。構文は「.[クラス名]」です。"."（ピリオド）を忘れないようにしましょう。</p>
+				<div class="code_space">
+					<code>
+						.list{<br>&#160&#160&#160&#160color:&#160red;<br>}
+					</code>
+				</div>
+				<div class="code_space">
+					<code>
+						&#60div&#160class="list"&#62<br>
+						&#160&#160&#160&#160&#60p&#62ここは適用される&#60/p&#62<br>
+						&#60/div&#62<br><br>
+						&#60p&#62ここは適用されない&#60/p&#62
+					</code>
+				</div>
+				<div class="code_output">
+					<p style="color: red;">ここは適用される</p>
+					<p>ここは適用されない</p>
+				</div>
+				<p>前回紹介したdivタグの存在意義が分かりましたか？</p>
+				
+				<h4>「または」の選択方法</h4>
+				<p>これまでに紹介したセレクタを","（コンマ）で繋ぐことで、それぞれのセレクタの要素に対して適用されます。これで、重複記述を減らすことができます。</p>
+				<div class="code_space">
+					<code>
+						p,h5{<br>&#160&#160&#160&#160color:&#160red;<br>}
+					</code>
+				</div>
+				<div class="code_space">
+					<code>
+						&#60p&#62ここは適用される&#60/p&#62<br><br>
+						&#60h5&#62ここも適用される&#60/h5&#62
+					</code>
+				</div>
+				<div class="code_output">
+					<p style="color: red;">ここは適用される</p>
+					<h5 style="color: red;">ここも適用される</h5>
+				</div>
+				
+				<h4>「かつ」の選択方法</h4>
+				<div class="code_space">
+					<code>
+						.content p{<br>&#160&#160&#160&#160color:&#160red;<br>}
+					</code>
+				</div>
+				<div class="code_space">
+					<code>
+						&#60div&#160class="content"&#62<br>
+						&#160&#160&#160&#160&#60p&#62ここは適用される&#60/p&#62<br>
+						&#160&#160&#160&#160&#60h5&#62ここは適用されない&#60/h5&#62<br>
+						&#60/div&#62<br>
+						&#60p&#62ここは適用されない&#60/p&#62
+					</code>
+				</div>
+				<div class="code_output">
+					<p style="color: red;">ここは適用される</p>
+					<h5>ここは適用されない</h5>
+					<p>ここは適用されない</p>
+				</div>
+				<p>先ほどと同じように、空白で区切ることで指定のタグに含まれるタグのみに適用させることができます。</p>
+				<p>もっと、複雑な「〜でない範囲」や、「奇数（偶数）番目にある〜」のようなセレクタもあります。セレクタは使いこなせるようになりましょう。</p>
+			</div>
+			<div class="color_expla">
+				<h2>色の書き方</h2>
+				<a name="color_expla">
+				<p>cssを書いていくのあたって、色を記述することがよくあります。</p>
+				<p>色の記述はこのような時に使います。</p>
+				<div class="code_space">
+					<code>
+						h1{<br>&#160&#160&#160&#160background-color:&#160[色の記述];<br>}
+					</code>
+				</div>
+				<p>多くのcssプロパティの[値]には<b>数字</b>・<b>色</b>・<b>指定された文字列</b>などが入ります。</p>
+				<p>ここではその中の色の書き方について、紹介します。</p>
+				<p>色の書き方には主に4種類あり、使い分けないといけません。</p>
+				<ul>
+					<li>色の名前をそのまま書くパターン</li>
+					<li>カラーコードと呼ばれる16進法の数字を入れる方法</li>
+					<li>色の三原色のそれぞれの値を代入する方式</li>
+					<li>1つものの前に透明度を含めた方式</li>
+				</ul>
+				<h4>色の名前をそのまま書くパターン</h4>
+				<div class="code_space">
+					<code>
+						p{<br>&#160&#160&#160&#160background-color:&#160blue;<br>}
+					</code>
+				</div>
+				<div class="code_output">
+					<p style="background-color: blue;">青になる</p>
+				</div>
+				<p>赤色なら「red」、青色なら「blue」などと、色の名前をそのまま代入する方法です。一番直感的に分かりやすいと思います。</p>
+				<p>背景色が青のような濃い色だと、文字がほとんど読めませんね。前回話した通り、背景色に濃い色は使わないようにしましょう。</p>
+				<h4>カラーコードと呼ばれる16進法の数字を入れる方法</h4>
+				<div class="code_space">
+					<code>
+						p{<br>&#160&#160&#160&#160background-color:&#160#F1DE9E;<br>}
+					</code>
+				</div>
+				<div class="code_output">
+					<p style="background-color: #F1DE9E">色の名前がわからない、、、1</p>
+				</div>
+				<p>「#」の後に、カラーコードを入れるとその色を反映させることができます。</p>
+				<p>この方法では、一つ目の方法と違って、名前もないような（あるんだろうけど）様々な色を記述することができます。</p>
+				<h4>色の三原色のそれぞれの値を代入する方式</h4>
+				<div class="code_space">
+					<code>
+						p{<br>&#160&#160&#160&#160background-color:&#160rgb(241,222,158);<br>}
+					</code>
+				</div>
+				<div class="code_output">
+					<p style="background-color: #F1DE9E">色の名前がわからない、、、2</p>
+				</div>
+				<p>方式は先ほどと全く同じです。先ほどは16進法で表現しましたが、これは10進法の数字を用います。（1から255）</p>
+				<p>「rgb」は「red,green,blue」の頭文字です。それぞれの数字も同じ順序で記述します。</p>
+				<h4>透明度を含めた方式</h4>
+				<div class="code_space">
+					<code>
+						p{<br>&#160&#160&#160&#160background-color:&#160rgba(241,222,158,0.3);<br>}
+					</code>
+				</div>
+				<div class="code_output">
+					<p style="background-color: rgba(241,222,158,0.3)">色の名前がわからない、、、そして透明</p>
+				</div>
+				<p>先ほどのものに、透明度αを加えたものです。<br>これで、透ける要素を作ることができます。cssには半透明にするプロパティもあるのですが、それだと子要素まで透明になってしますので、重宝します。</p>
+				<p>「rgba」は「red,green,blue,α」の意味です。</p>
+				<p>α（透明度）の値は0以上1以下です。</p>
+			</div>
+			<div class="content-locate_expla">
+				<h2>配置の記述</h2>
+				<a name="locate_expla">
+				<p>cssにおいて、色と同じように重要なのが、要素の配置です。先ほど説明した色の書き方と比べかなり難しいです。</p>
+				<p>まず、htmlには要素があります。要素とはタグに囲まれた範囲のことです。実際には見えないですが、きちんとその範囲の境界線が内部で定義されています。</p>
+				<p>cssのborderタグを使うと、境界線を実際に表示できるので分かりやすくなるのではないかと思います。</p>
+				<p>一つの要素の中には、その要素を含む親要素と、その要素が含む子要素があります。</p>
+				<div class="content-locate_expla-parent" style="border: solid 2px red; padding: 20px;">
+					<p>親要素</p>
+					<div class="content-locate_expla-facter" style="border: solid 2px red; padding: 20px;">
+						<p>基準の要素</p>
+						<div class="content-locate_expla-child" style="border: solid 2px red; padding: 20px;">
+							<p>子要素</p>
+						</div>
+					</div>
+				</div>
+				<p>自分と親要素の間隔は「margin（外部余白）」とよばれ</p>
+				<p>自分と子要素の間隔は「padding（内部余白）」と呼ばれます。</p>
+				<p>また、自分は親要素のpaddingを除いた範囲のなかにいるわけですが、その中でどの方向（左・中央・右）に寄せるのかを表すのが、「text-align」です。textと書いていますが、文章以外の要素（画像）などにも使えます。</p>
+				<p>これを利用すると、上側のmargin（margin-top）を大きな値に設定することで、そこに余白を作ることができます。</p>
+				<p>cssで使う単位には「px」「%」があります。pxは絶対的な長さを、%は親要素の長さとの比を表します。<br>他にもたくさん単位はありますが、ここでは紹介しません。プロパティ（borderやmargin、colorなどの設定対象のこと）によったら、使えないケースもあるので注意してください。</p>
+			</div>
+			<div class="content-tag_list">
+				<h2>よく使うプロパティ</h2>
+				<a name="tag_list">
+				<ul>
+					<li>background-image：背景画像の指定（URL）</li>
+					<li>background-color：背景色の指定（色）</li>
+					<li>width：横幅の指定（長さ）</li>
+					<li>height：高さの指定（長さ）</li>
+					<li>margin：外部余白の指定（後で解説）</li>
+					<li>padding：内部余白の指定（後で解説）</li>
+					<li>text-align：範囲の中でどちらに寄せるか（方向）</li>
+					<li>color：フォントの色の指定（色）</li>
+					<li>font-size：フォントの大きさの指定（長さ）</li>
+					<li>font-family：フォントの種類の指定（種類の名前）</li>
+					<li>border：境界線の指定（後で解説）</li>
+				</ul>
+				<p>基本的にはプロパティにつく値は一つです。（）のなかに入っている値を入力してください。</p>
+				<p>しかし、中には複雑な値を入力しないといけないこともあります。<br>それについて解説します。</p>
+				<div class="content-tag_list-margin_and_padding">
+					<h3>marginとpaddingの使い方</h3>
+					<p>margin/paddingの使い方には 3種類あります。</p>
+					<ul>
+						<li>「margin:&#160[値];」</li>
+						<li>「margin:&#160[高さの値]&#160[横幅の値];」</li>
+						<li>「margin:&#160[margin-top]&#160[margin-left]&#160[margin-bottom]&#160[margin-right];」</li>
+					</ul>
+				<p>一つ目は全方向に対して、marginを指定します。</p>
+				<p>2つ目は横方向と縦方向に対して、marginを設定します。</p>
+				<p>3つ目は全方向にそれぞれmarginを設定します。</p>
+				<p>margin-[方向]でも設定できますが、これを用いるとより簡単に書くことができます。<br>このような短く書くことを可能にするプロパティをショートハンドプロパティと呼びます。</p>
+				<p>なお、paddingでも全く同じ構文があります。</p>
+				</div>
+				<div class="content-tag_list-border">
+					<h3>borderの使い方</h3>
+					<p>構文は以下の通りです。</p>
+					<div class="code_space">
+						<code>
+							border:&#160[線の太さ（長さ）],&#160[線の種類（後で解説）],&#160[線の色（色）];
+						</code>
+					</div>
+					<p>borderもショートハンドプロパティです。なので、border-[方向]-[指定対象]というプロパティで別々に指定することができます。</p>
+					<p>[方向]には「top」「left」「right」「bottom」が入ります。</p>
+					<p>[指定対象]には「color（色）」「style（種類）」「width（太さ）」</p>
+					<p>また、線の種類は10通りありますが、ここではよく使うであろう4種類を紹介します。</p>
+					<ul>
+						<li>none：何もなし（初期）</li>
+						<li>solid：実線</li>
+						<li>dotted：点線</li>
+						<li>double：2本線</li>
+					</ul>
+					<p>他には、凹んだように見える線などがあります。</p>
+				</div>
+			</div>
+		</div>
+		<!--本物の内容終わり-->
+		
+		<!--今回で覚えること-->
+		<div class="content-remember">
+			<h2>今回のまとめ</h2>
+			<ul>
+				<li>cssを読み出す方法は<br>「タグの中に属性として記述する」<br>「headタグ内のstyleタグに記述」<br>「外部ファイルに記述」</li>
+				<li>セレクタの書き方は<br>「タグの名前をそのまま」<br>「クラス名にピリオドをつける」<br>コンマで繋げると「または、」<br>空白で繋げると「かつ、」</li>
+				<li>色は色の名前を書くか、#[カラーコード]・rgb・rgbaでかく</li>
+				<li>marginは外部余白</li>
+				<li>paddingは内部余白</li>
+				<li>cssの長さの単位はpxと%</li>
+				<li>まとめて書けるプロパティをショートハンドプロパティと言い、borderやmargin、paddingがある。</li>
+			</ul>
+		</div>
+		<div class="link">
+			<p>最後まで読んでいただきありがとうございます！</p>
+			<p>次回はhtmlのタグについて解説していきます。</p>
+			<a href="0004.html">次回の記事はこちらから（準備中）</a>
+		</div>
+		<!--内容終わり-->
+	</main>
+
+	<div id="footer"></div>
+	<!--後のjsでここに、base_footer.htmlを読み込み、追加する-->
+</body>
+<!--base_header.htmlとbase_footer.htmlを読み込み、#headerと#footerに反映するjs-->
+<script>
+      fetch("../../base_header.html")//＊相対参照注意
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#header").innerHTML = data);
+      fetch("../../base_footer.html")//＊相対参照注意
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#footer").innerHTML = data);
+</script>
+</html>
