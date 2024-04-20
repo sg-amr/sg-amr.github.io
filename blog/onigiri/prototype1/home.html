@@ -20,10 +20,8 @@
 	<meta content="トップページ">
 	
 	<!--cssを読み込み-->
-	<!--共通部分のcssを読み込み・共通部分のcssはmain内はbackground-colorのみ設定しているので、競合することはないと思われる。-->
-	<link rel="stylesheet" href="css/base.css"><!--相対参照注意-->
 	<!--＊-このページ独自のcssを読み込み／cssはcssフォルダに追加するようにしてください。-->
-	<link rel="stylesheet" href="css/index.css"><!--相対参照注意-->
+	<link rel="stylesheet" href="css/home.css"><!--相対参照注意-->
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--モバイルフレンドリー化-->
 
@@ -31,12 +29,11 @@
 </head>
 <body>
 	<div id="header"></div>
-	<!--後のjsでここに、base_header.htmlを読み込み、追加する-->
-
 	<main>
 		<!--＊内容-->
-		<div class="outline">
-      <h3>aoristos</h3><h3>=</h3><h3>「非」定義
+		<div class="catchcopy">
+      <img src="image/机.jpg">
+      <h3>授業で学ばない<br>  学びを学校で</h3>
     </div>
     
     <div class="news">
@@ -93,13 +90,4 @@
 	<div id="footer"></div>
 	<!--後のjsでここに、base_footer.htmlを読み込み、追加する-->
 </body>
-<!--base_header.htmlとbase_footer.htmlを読み込み、#headerと#footerに反映するjs-->
-<script>
-      fetch("base_header.html")//＊相対参照注意
-        .then((response) => response.text())
-        .then((data) => document.querySelector("#header").innerHTML = data);
-      fetch("base_footer.html")//＊相対参照注意
-        .then((response) => response.text())
-        .then((data) => document.querySelector("#footer").innerHTML = data);
-</script>
 </html>
