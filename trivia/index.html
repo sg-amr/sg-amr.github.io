@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<!--
+
+edit sport: 
+1,Meta tag
+2,local StyleSheet
+3,content html
+4,other Path
+
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet" />
+
+
+    <!--OGP and Meta Tag-->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <title>{props.data.head.title}</title>
+    <meta name="description" content={props.data.head.title} />
+
+    <meta property="og:url" content={window.location.href} />
+    <meta property="og:title" content={props.data.head.title} />
+    <meta property="og:type" content={getType()} />
+    <meta property="og:description" content={props.data.head.description} />
+    <meta property="og:image" content={props.data.head.image} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="Team_Aoristos" />
+    <meta poperty="og:site_name" content="Team Aoristos公式サイト" />
+    <meta property="og:local" content="ja_JP" />
+
+    <link rel="icon" sizes="16x16" href={iconImage().s16} />
+    <link rel="icon" sizes="32x32" href={iconImage().s32} />
+    <link rel="icon" sizes="48x48" href={iconImage().s48} />
+    <link rel="icon" sizes="62x62" href={iconImage().s62} />
+    <link rel="apple-touch-icon-precomposed" href={iconImage().s150} />
+    <link rel="msapplication-TileImage" content={iconImage().s150} />
+    <link rel="msapplication-TileColor" content="#FFFDFA" />
+
+    <link rel="next" href={getNextPrev().nextUrl} />
+    <link rel="prev" href={getNextPrev().prevUrl} />
+
+    <!--OGP and Meta Tag finish-->
+    <script>
+        // デバイスを特定する関数
+        function detectDevice() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            if (userAgent.includes("mobile") || userAgent.includes("android") || userAgent.includes("iphone") || userAgent.includes("ipad")) {
+                return 'mobile';
+            } else {
+                return 'desktop';
+            }
+        }
+
+        // CSSファイルを読み込む関数
+        function loadCSS(filename) {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = filename;
+            document.head.appendChild(link);
+        }
+
+        // デバイスに応じてCSSを読み込む
+        window.onload = function () {
+            const device = detectDevice();
+            if (device === 'mobile') {
+                loadCSS('../mobile.css'); // モバイル用CSSファイルを読み込む
+            } else {
+                loadCSS('../desktop.css'); // デスクトップ用CSSファイルを読み込む
+            }
+        }
+    </script>
+    <style>
+        /*Here is stylesheet*/
+    </style>
+</head>
+
+<body>
+    <div class="constant">
+        <nav>
+            <img src="../icon.svg" alt="icon" />
+            <h1>Team Aoristos</h1>
+            <div class="hamburger">
+                <ul>
+                    <div class="openbtn"><span></span><span></span><span></span></div>
+                    <nav id="g-nav">
+                        <div id="g-nav-list"><!--ナビの数が増えた場合縦スクロールするためのdiv※不要なら削除-->
+                            <ul class="g-nav-listUl">
+                                <a href="../">Top</a>
+                                <p>トップ</p>
+                                <a href="../blog/">Blog</a>
+                                <p>ブログ</p>
+                                <a href="../member/">Member</a>
+                                <p>メンバー紹介</p>
+                                <a href="../contest/">Contest</a>
+                                <p>コンテスト紹介</p>
+                                <a href="../group/">Group</a>
+                                <p>班についての紹介</p>
+                                <a href="../group/">Comment</a>
+                                <p>コメント</p>
+                                <a href="../intro/">Introduction</a>
+                                <p>チームの紹介</p>
+                                <a href="../trivia/">Trivia</a>
+                                <p>毎日雑学</p>
+                            </ul>
+                        </div>
+                    </nav>
+                </ul>
+            </div>
+            <a href="../blog" class="last nav" class="nav">ブログ</a>
+            <a href="../intro" class="nav">チームについて</a>
+            <a href="../" class="nav">トップ</a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <!--Here is content. edit here!-->
+        <h1 class="wait">準備中です。しばらくお待ちください.....</h1>
+
+    </div>
+
+    <div class="contact">
+        <hr />
+        <h1>Contact</h1>
+        <p>ご質問等あれば、遠慮なくこちらからお願いいたします。</p>
+        <div class="contactBotton">
+            <div class="xContact">
+                <a class="xBotton" href="https://x.com/Team_Aoristos">公式XへDMする</a>
+            </div>
+            <div class="mailContact">
+                <a class="mailBotton" href="mailto:sg.amr@outlook.jp">メールを送信する</a>
+            </div>
+        </div>
+        <img src="" alt="">
+        <hr />
+    </div>
+
+    <div class="sitemap">
+        <h1>Site Map</h1>
+        <a href="../">Top</a>
+        トップ<br />
+        <a href="../blog/">Blog</a>
+        ブログ<br />
+        <a href="../member/">Member</a>
+        メンバー紹介<br />
+        <a href="../contest/">Contest</a>
+        コンテスト紹介<br />
+        <a href="../group/">Group</a>
+        班についての紹介<br />
+        <a href="../comment/">Comment</a>
+        コメント<br />
+        <a href="../intro/">Introduction</a>
+        チームの紹介<br />
+        <a href="../trivia/">Trivia</a>
+        毎日雑学<br />
+        <img src="../sitemap-bgImage.jpeg" alt="blackbord picture" />
+    </div>
+
+    <div class="waveF"><canvas id="waveCanvas"></canvas></div>
+
+    <p class="copyright">&copy; 2024 Team Aoristos</p>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

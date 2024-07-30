@@ -1,0 +1,507 @@
+  /*========= ナビゲーションのためのCSS ===============*/
+
+  #g-nav {
+      position: fixed;
+      z-index: 999;
+      top: -120%;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #999;
+      transition: all 0.6s;
+  }
+
+  /*アクティブクラスがついたら位置を0に*/
+  #g-nav.panelactive {
+      top: 0;
+  }
+
+
+  /*リストのレイアウト設定*/
+
+
+  /*========= ボタンのためのCSS ===============*/
+  .openbtn {
+      position: fixed;
+      z-index: 9999;
+      top: -7px;
+      right: 0px;
+      cursor: pointer;
+      width: 70px;
+      height: 70px;
+  }
+
+  /*×に変化*/
+  .openbtn span {
+      display: inline-block;
+      transition: all .4s;
+      position: absolute;
+      left: 14px;
+      height: 3px;
+      border-radius: 2px;
+      background-color: #666;
+      width: 45%;
+  }
+
+  .openbtn span:nth-of-type(1) {
+      top: 15px;
+  }
+
+  .openbtn span:nth-of-type(2) {
+      top: 23px;
+  }
+
+  .openbtn span:nth-of-type(3) {
+      top: 31px;
+  }
+
+  .openbtn.active span:nth-of-type(1) {
+      top: 18px;
+      left: 18px;
+      transform: translateY(6px) rotate(-45deg);
+      width: 30%;
+  }
+
+  .openbtn.active span:nth-of-type(2) {
+      opacity: 0;
+  }
+
+  .openbtn.active span:nth-of-type(3) {
+      top: 30px;
+      left: 18px;
+      transform: translateY(-6px) rotate(45deg);
+      width: 30%;
+  }
+
+  /*ハンバーガーメニュー*/
+
+  body {
+      padding: 0px;
+      margin: 0px;
+  }
+
+  .constant {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      text-align: right;
+      background-color: rgb(128, 212, 118);
+      box-shadow: 0px 3px 5px 0px rgba(59, 58, 58, 0.45);
+      z-index: 99;
+  }
+
+  .constant nav .nav {
+      margin: 0px 0px;
+      float: right;
+      padding: 5px 50px 0px 50px;
+      border-left: 1px rgba(0, 0, 0, 0.7) solid;
+      font-size: 20px;
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.7);
+      font-family: 'Alegreya Sans SC', sans-serif;
+  }
+
+  .constant nav .nav {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+  }
+
+  .constant nav .nav:after {
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #6868683d;
+      transform: translate(-100%, 0%);
+      transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+      content: "";
+  }
+
+  .constant nav .nav:hover:after {
+      transform: translate(0, 0);
+  }
+
+  .constant nav .last {
+      margin-right: 50px;
+      border-right: 3px rgba(0, 0, 0, 0.206) solid;
+  }
+
+  .constant nav h1 {
+      float: left;
+      margin: 0px 40px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-family: 'Alegreya Sans SC', sans-serif;
+      font-size: 23px;
+      color: rgba(0, 0, 0, 0.7);
+  }
+
+  .constant nav .hamburger {
+      float: right;
+  }
+
+  .constant nav img {
+      float: left;
+      padding: 0px 0px;
+      width: 70px;
+      height: 70px;
+      margin-top: -10px;
+      margin-bottom: -30px;
+  }
+
+  #g-nav-list a {
+      margin: 6px 0px;
+      left: 40%;
+      font-size: 50px;
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.7);
+      font-family: 'Alegreya Sans SC', sans-serif;
+      padding: 30px;
+  }
+
+  #g-nav-list a:hover {
+      color: rgba(0, 0, 0, 0.4);
+  }
+
+  #g-nav-list p {
+      padding: 0px;
+      margin: -3px 0px;
+  }
+
+  #g-nav {
+      text-align: center;
+  }
+
+  .title {
+      text-align: center;
+      font-family: 'Alegreya Sans SC', sans-serif;
+  }
+
+  .title h1 {
+      font-size: 80px;
+      margin: 0px;
+      margin-bottom: 40px;
+      padding: 0px;
+      color: rgba(0, 0, 0, 0.7);
+  }
+
+  .title p {
+      margin: 60px 0px 0px 0px;
+      font-size: 40px;
+      color: rgba(0, 0, 0, 0.5);
+  }
+
+  .title img {
+      padding: 0px;
+      margin: -250px;
+      width: 80%;
+  }
+
+  .catchcopy {
+      text-align: center;
+      font-size: 30px;
+      margin: 200px 200px;
+      border: solid black 1px;
+      background-color: #ffffff;
+      padding: 50px;
+      box-shadow: 0px 3px 5px 0px rgba(59, 58, 58, 0.45);
+      z-index: 99;
+  }
+
+  .catchcopy h1 {
+      font-style: italic;
+      font-family: 'Alegreya Sans SC', sans-serif;
+  }
+
+  .card {
+      margin: 300px 20px;
+      padding: 20px 50px;
+      position: relative;
+  }
+
+
+
+  .card h1 {
+      padding: 0px;
+      margin: 0px;
+      margin-top: 40px;
+  }
+
+  .card h2 {
+      font-size: 90px;
+      color: rgba(0, 0, 0, 0.3);
+      margin: -110px 10px;
+      padding: 0px;
+      margin-bottom: -40px
+  }
+
+  .card p {
+      margin: 30px 0px 30px 0px;
+      font-size: 25px;
+  }
+
+  .card a {
+      border: 2px solid #000000ab;
+      font-size: 25px;
+      border-radius: 10px;
+      background-color: #ffffff;
+      text-decoration: none;
+      color: #000000;
+      padding: 20px 30px;
+      margin: 0px 20px 0px 20px;
+      box-shadow: 3px 3px 2px 1px rgba(57, 57, 57, 0.23);
+  }
+
+  .card .float {
+      float: right;
+  }
+
+  .card a:hover {
+      color: #000000;
+      background-color: #999;
+      box-shadow: inset 3px 3px 2px 1px rgba(57, 57, 57, 0.23);
+  }
+
+  .card .groupLink a {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      display: inline-block;
+  }
+
+  html,
+  body {
+      height: 100%;
+      /*高さを100%にして描画エリアをとる*/
+  }
+
+  #particles-js {
+      position: fixed;
+      /*描画固定*/
+      z-index: -99;
+      /*描画を一番下に*/
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      /*背景色*/
+  }
+
+  #wrapper {
+      position: relative;
+      /*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+      z-index: 1;
+      /*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+      width: 100%;
+      height: 100%;
+  }
+
+  .wave {
+      width: 0px;
+      height: 0px;
+  }
+
+  .wave .after {}
+
+  .wave .before {}
+
+  .fadeUpTrigger {
+      opacity: 0;
+  }
+
+  .fadeUp {
+      animation-name: fadeUpAnime;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+  }
+
+  @keyframes fadeUpAnime {
+      from {
+          opacity: 0;
+          transform: translateY(100px);
+      }
+
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  .waveF {
+      position: relative;
+      height: 200px;
+      width: 100vw;
+      /*何も表示されない場合は各波の親要素に高さを持たせましょう。*/
+  }
+
+
+  .waveCanvas {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+  }
+
+  .xBooton {
+      background-color: #d38b51;
+      width: 60px;
+      height: 30px;
+      border-radius: 5px;
+      box-shadow: 3px 3px 2px 1px rgba(57, 58, 58, 0.23);
+  }
+
+
+  .xBotton:active {
+      background-color: #B46A2E;
+      box-shadow: inset 3px 3px 2px 1px rgba(57, 57, 57, 0.23);
+  }
+
+  .mailBotton:active {
+      background-color: #B46A2E;
+      box-shadow: inset 3px 3px 2px 1px rgba(57, 57, 57, 0.23);
+  }
+
+  .cards {
+      text-align: center;
+  }
+
+  .contact {
+      max-width: 800px;
+      margin: 0;
+      padding: 20px;
+      text-align: left;
+      border-radius: 10px;
+      padding-bottom: 50px;
+  }
+
+  .contact hr {
+      width: 100vw;
+  }
+
+  .contact h1 {
+      font-size: 2.5em;
+      color: #333;
+      margin-bottom: 10px;
+  }
+
+  .contact p {
+      font-size: 1.2em;
+      color: #666;
+      margin-bottom: 20px;
+  }
+
+  .xContact,
+  .mailContact {
+      margin: 20px 70px;
+  }
+
+  .xBotton,
+  .mailBotton {
+      padding: 10px 50px;
+      text-align: center;
+      font-size: 1em;
+      color: #fff;
+      background-color: #1da1f2;
+      /* Twitter/X blue */
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+  }
+
+  .mailBotton {
+      float: left;
+      margin: 30px 0px;
+  }
+
+  .xBotton:hover,
+  .mailBotton:hover {
+      background-color: #0a85d9;
+      /* Darker shade for hover effect */
+  }
+
+  .contactBotton {
+      margin-left: 70vw;
+      text-align: right;
+  }
+
+  .sitemap a {
+      margin: 6px 0px;
+      left: 40%;
+      font-size: 50px;
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.7);
+      font-family: 'Alegreya Sans SC', sans-serif;
+      padding: 30px;
+  }
+
+  .sitemap a:hover {
+      color: rgba(0, 0, 0, 0.4);
+  }
+
+  .sitemap p {
+      padding: 0px;
+      margin: 2px 0px;
+  }
+
+  .sitemap h1 {
+      font-size: 2.5em;
+      color: #333;
+      margin-bottom: 10px;
+  }
+
+  .sitemap {
+      padding: 20px;
+      margin-top: 20px;
+  }
+
+  .sitemap img {
+      width: 40vw;
+      margin-top: 30px;
+      border-radius: 10px;
+      float: right;
+      margin-top: -400px;
+      margin-right: 40px;
+      transform: rotate(5deg);
+  }
+
+  .copyright {
+      margin: -1px;
+      padding: 0px;
+      padding-top: 2px;
+      background-color: #47ab42;
+      opacity: 75%;
+      width: 100vw;
+      height: 30px;
+      text-align: center;
+      padding-top: -1px;
+      box-shadow: 0px -5px 8px -8px #777777;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .content h1.wait{
+    background-image: url(wait.svg);
+    opacity: 70%;
+    padding: 200px 0px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    font-size: 30px;margin: 100px 0px;text-align: center;
+  }
