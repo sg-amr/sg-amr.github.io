@@ -124,7 +124,6 @@ edit sport:
         <!--Here is content. edit here!-->
         <h1 class="wait">準備中です。しばらくお待ちください.....</h1>
 
-
     </div>
 
     <div class="contact">
@@ -172,6 +171,22 @@ edit sport:
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
     <script src="../script.js"></script>
+    <script>
+        //get element
+        const articleCardsElement = document.getElementById("articleCards");
+
+        //load html
+        function loadCard(input) {
+            articleCardsElement.innerHTML = input;
+        }
+
+        const articlesData = {
+            math: []
+        }
+
+
+        loadCard(data);
+    </script>
 </body>
 
 </html>
