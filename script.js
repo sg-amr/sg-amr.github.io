@@ -133,7 +133,10 @@ particlesJS("particles-js", {
         }
     },
     "retina_detect": true
-});}
+});} else {
+    const bgimageElement = document.getElementById("bgimage");
+    bgimageElement.classList.add("bgimage");
+}
 
 var unit = 100,
     canvasList, // キャンバスの配列

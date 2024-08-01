@@ -491,6 +491,10 @@
       box-shadow: 0px -5px 8px -8px #777777;
   }
 
+  .bgimage{
+    background-image: url("backgroundDesktop.jpeg");
+    background-attachment: fixed;
+  }
 
 
 
