@@ -469,7 +469,7 @@
   }
 
   .copyright {
-      margin: -1px;
+      margin: -10px;
       padding: 0px;
       padding-top: 2px;
       background-color: #47ab42;
@@ -485,6 +485,88 @@
     background-image: url("backgroundMobile.jpeg");
     background-attachment: fixed;
   }
+
+ /* ボタン全体の外枠指定 */
+.snsbtniti {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 350px;/* ボタンを設置する場所の最大横幅 */
+    margin: 0 auto;/* ボタンを中央へ */
+  }
+  
+  /* ulタグの内側余白なしと箇条書きの黒丸削除 */
+  ul.snsbtniti {
+    padding: 0!important;
+    list-style-type: none!important;
+  }
+  
+  /* ボタン同士の余白調整 */
+  .snsbtniti li {
+    flex: 0 0 33%;/* ボタンを3つ並びへ */
+    text-align: center!important;
+  }
+  
+  /* ボタン全体 */
+  .flowbtn {
+    font-family: 'Noto Sans Japaneses', sans-serif; /* フォント指定 */
+    position: fixed;
+    left: 15px;
+    z-index: 90;
+    list-style: none;
+    display: inline-block;
+    width: 50px; /* 背景横幅 */
+    height: 50px;/* 背景高さ */
+    font-size: 30px;/* アイコンサイズ */
+    border-radius: 4px;
+    color: #fff!important;/* ボタン内カラー */
+    transition: .5s;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 1px 2px #999;
+    margin-bottom:10px;/* ボタン下余白 */
+  }
+  
+  /* アイコンの位置を少し下げる */
+  .flowbtn i {
+    position: relative;
+    top: 5px;
+  }
+  
+  /* ボタン内テキスト調整 */
+  .flowbtn div {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0;
+    display: none;
+  }
+  
+  /* ボタンマウスホバー時少し浮き上がる */
+  .flowbtn:hover {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* インスタ・Amazonのアイコンを少し大きく */
+  .flowbtn i.fa-brands.fa-instagram,.flowbtn i.fa-brands.fa-amazon {
+    font-size: 35px;
+  }
+  
+  /* エックス背景 */
+  .my_x1 {
+    background: #000;
+    bottom: 120px;
+  }
+  
+  /* Instagram紫グラデ背景 */
+  .my_instagram1 {
+   background: linear-gradient(45deg, rgba(254,212,117,1) 0%,rgba(229,61,93,1) 50%,rgba(194,49,134,1) 70%,rgba(156,56,187,1) 100%);
+   bottom: 30px;
+  }
+
 
 
 

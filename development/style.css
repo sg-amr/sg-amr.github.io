@@ -1,0 +1,143 @@
+/* ボタン全体の外枠指定 */
+.snsbtniti {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 350px;/* ボタンを設置する場所の最大横幅 */
+    margin: 0 auto;/* ボタンを中央へ */
+  }
+  
+  /* ulタグの内側余白なしと箇条書きの黒丸削除 */
+  ul.snsbtniti {
+    padding: 0!important;
+    list-style-type: none!important;
+  }
+  
+  /* ボタン同士の余白調整 */
+  .snsbtniti li {
+    flex: 0 0 33%;/* ボタンを3つ並びへ */
+    text-align: center!important;
+  }
+  
+  /* ボタン全体 */
+  .flowbtn {
+    font-family: 'Noto Sans Japaneses', sans-serif; /* フォント指定 */
+    position: relative;
+    display: inline-block;
+    width: 75px; /* 背景横幅 */
+    height: 65px;/* 背景高さ */
+    font-size: 30px;/* アイコンサイズ */
+    border-radius: 4px;
+    color: #fff!important;/* ボタン内カラー */
+    transition: .5s;
+    text-decoration: none;
+    box-shadow: 0 1px 2px #999;
+    margin-bottom:10px;/* ボタン下余白 */
+  }
+  
+  /* アイコンの位置を少し下げる */
+  .flowbtn i {
+    position: relative;
+    top: 5px;
+  }
+  
+  /* ボタン内テキスト調整 */
+  .flowbtn div {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0;
+  }
+  
+  /* ボタンマウスホバー時少し浮き上がる */
+  .flowbtn:hover {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* インスタ・Amazonのアイコンを少し大きく */
+  .flowbtn i.fa-brands.fa-instagram,.flowbtn i.fa-brands.fa-amazon {
+    font-size: 35px;
+  }
+  
+  /* エックス背景 */
+  .my_x1 {
+    background: #000;
+  }
+  
+  /* Instagram紫グラデ背景 */
+  .my_instagram1 {
+   background: linear-gradient(45deg, rgba(254,212,117,1) 0%,rgba(229,61,93,1) 50%,rgba(194,49,134,1) 70%,rgba(156,56,187,1) 100%);
+  }
+  
+  /* Facebook背景 */
+  .my_facebook1 {
+    background: #1877f2;
+  }
+  
+  /* YouTube背景 */
+  .my_youtube1 {
+    background: #da1725;
+  }
+  
+  /* TikTok背景 */
+  .my_tiktok1 {
+    background: #000;
+  }
+  
+  /* Amazon背景 */
+  .my_amazon1 {
+    background: #ff9900;
+  }
+  
+  /* LINE背景 */
+  .my_line1 {
+    background: #00b900;
+  }
+  
+  /* ピンタレスト背景 */
+  .my_pinterest1 {
+    background: #bd081c;
+  }
+  
+  /* はてブ背景 */
+  .my_hatena1 {
+    background: #1ba5dc;
+  }
+  /* はてブビックリマーク */
+  .my_hatena1 .fa-b::after {
+    content: "!";
+    padding-left: 5px;
+  }
+  
+  /* Pocket背景 */
+  .my_pocket1 {
+    background: #ef3f56;
+  }
+  
+  /* Feedly背景 */
+  .my_feedly1 {
+    background: #6cc655;
+  }
+  
+  /* 楽天ROOM背景 */
+  .my_rakutenroom1 {
+    background: #c61d79;
+  }
+  
+  /* リンクドイン背景 */
+  .my_linkedin1 {
+    background: #0a66c2;
+  }
+  
+  /* ディスコード背景 */
+  .my_discord1 {
+    background: #7289da;
+  }
+  
+  /* Podcast背景 */
+  .my_podcast1 {
+    background: #813BF2;
+  }
