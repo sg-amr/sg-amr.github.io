@@ -521,7 +521,7 @@
   .flowbtn {
     font-family: 'Noto Sans Japaneses', sans-serif; /* フォント指定 */
     position: fixed;
-    left: 15px;
+    bottom: 30px;
     z-index: 90;
     list-style: none;
     display: inline-block;
@@ -567,13 +567,13 @@
   /* エックス背景 */
   .my_x1 {
     background: #000;
-    bottom: 120px;
+    right: 30px;
   }
   
   /* Instagram紫グラデ背景 */
   .my_instagram1 {
    background: linear-gradient(45deg, rgba(254,212,117,1) 0%,rgba(229,61,93,1) 50%,rgba(194,49,134,1) 70%,rgba(156,56,187,1) 100%);
-   bottom: 30px;
+   right: 30px;
   }
 
 

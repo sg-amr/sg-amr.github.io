@@ -151,6 +151,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="content">
         <!--Here is content. edit here!-->
         <h1 class="wait">準備中です。しばらくお待ちください.....</h1>
+        <div style="display:none;">
+            <h1>全てのブログ記事</h1>
+            <div class="cards">
+                <div class="articleCard">
+                    <h2>{props.data.articleTitle[1]}</h2>
+                    <p>{props.data.articleDescription}</p>
+                    <img src={props.data.articleImage} alt="記事の？？？" />
+                </div>
+                <div class="articleCard">
+                    <h2>{props.data.articleTitle[1]}</h2>
+                    <p>{props.data.articleDescription}</p>
+                    <img src={props.data.articleImage} alt="記事の？？？" />
+                </div>
+                
+            </div>
+            <div class="category">
+                <h1>カテゴリー別に探す</h1>
+                <div class="card">
+                    <h2>{props.data.articleTitle[1]}</h2>
+                    <p>{props.data.articleDescription}</p>
+                    <img src={props.data.articleImage} alt="記事の？？？" />
+                </div>
+                <div class="card">
+                    <h2>{props.data.articleTitle[1]}</h2>
+                    <p>{props.data.articleDescription}</p>
+                    <img src={props.data.articleImage} alt="記事の？？？" />
+                </div>
+                
+            </div>
+        </div>
 
     </div>
 
