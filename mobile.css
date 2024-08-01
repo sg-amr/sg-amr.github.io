@@ -78,11 +78,14 @@
   body {
       padding: 0px;
       margin: 0px;
+      margin-left: 6px;
+      margin-right: 6px;
   }
 
   .constant {
       position: fixed;
       top: 0;
+      left: 0;
       width: 100%;
       text-align: right;
       background-color: rgb(128, 212, 118);
@@ -268,6 +271,8 @@
 
   .card .float {
       float: right;
+      margin-right: 70px;
+    margin-top: 30px;
   }
 
   .card a:hover {
@@ -429,7 +434,6 @@
       text-decoration: none;
       color: rgba(0, 0, 0, 0.7);
       font-family: 'Alegreya Sans SC', sans-serif;
-      padding: 30px;
   }
 
   .sitemap a:hover {
