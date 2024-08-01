@@ -78,6 +78,8 @@
   body {
       padding: 0px;
       margin: 0px;
+      margin-left: 6px;
+      margin-right: 6px;
   }
 
   .constant {
@@ -160,7 +162,6 @@
       text-decoration: none;
       color: rgba(0, 0, 0, 0.7);
       font-family: 'Alegreya Sans SC', sans-serif;
-      padding: 30px;
   }
 
   #g-nav-list a:hover {
@@ -252,7 +253,7 @@
       text-decoration: none;
       color: #000000;
       padding: 20px 30px;
-      margin: 0px 20px 0px 20px;
+      margin: 35px 20px 0px 20px;
       box-shadow: 3px 3px 2px 1px rgba(57, 57, 57, 0.23);
   }
 
@@ -420,6 +421,10 @@
       margin: 30px 0px;
   }
 
+  .xBotton{
+    padding-right: 35px;
+  }
+
   .xBotton:hover,
   .mailBotton:hover {
       background-color: #0a85d9;
@@ -433,6 +438,7 @@
 
   .sitemap a {
       margin: 6px 0px;
+      margin-right: 20px;
       left: 40%;
       font-size: 50px;
       text-decoration: none;

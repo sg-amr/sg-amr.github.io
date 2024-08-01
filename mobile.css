@@ -78,8 +78,8 @@
   body {
       padding: 0px;
       margin: 0px;
-      margin-left: 6px;
-      margin-right: 6px;
+      margin-left: 10px;
+      margin-right: 10px;
   }
 
   .constant {
@@ -135,7 +135,7 @@
   .constant nav h1 {
       float: left;
       margin: 0px 40px;
-      padding-top: 6px;
+      padding: 6px 0;
       font-family: 'Alegreya Sans SC', sans-serif;
       font-size: 23px;
       color: rgba(0, 0, 0, 0.7);
@@ -161,7 +161,6 @@
       text-decoration: none;
       color: rgba(0, 0, 0, 0.7);
       font-family: 'Alegreya Sans SC', sans-serif;
-      padding: 30px;
   }
 
   #g-nav-list a:hover {
@@ -271,7 +270,7 @@
 
   .card .float {
       float: right;
-      margin-right: 70px;
+      margin-right: 50px;
     margin-top: 30px;
   }
 
@@ -359,7 +358,7 @@
       width: 100%;
   }
 
-  .xBooton {
+  .xBotton{
       background-color: #d38b51;
       width: 60px;
       height: 30px;
@@ -370,6 +369,8 @@
   .mailBotton {
       background-color: #d38b51;
       width: 60px;
+      
+      padding-right: 35px;
       height: 30px;
       border-radius: 5px;
       box-shadow: 3px 3px 2px 1px rgba(57, 57, 57, 0.23);
@@ -405,6 +406,9 @@
       margin: 50px 70px;
   }
 
+  .xBooton{
+    padding-right: 65px;
+  }
   .xBotton,
   .mailBotton {
       padding: 10px 50px;
@@ -431,6 +435,7 @@
       margin: 6px 0px;
       left: 40%;
       font-size: 30px;
+      margin-right: 20px;
       text-decoration: none;
       color: rgba(0, 0, 0, 0.7);
       font-family: 'Alegreya Sans SC', sans-serif;
