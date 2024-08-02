@@ -16,10 +16,13 @@
     const form = document.getElementById('commentForm');
     const commentSection = document.getElementById('commentSection');
     let lastRowLoaded = 0;
-    const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwchRPRn0Hu2KduqV2u9t-MP8UGX2zjN_yeJHK9ppxol2-Dqjurq-tW1K5nSjhx28t7oA/exec';
+    const GAS_WEB_APP_URL = 'YOUR_GAS_WEB_APP_URL';
+    const displayedCommentIds = new Set(); // 既に表示されたコメントのIDを保存
 
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
+      const submitButton = this.querySelector('button[type="submit"]');
+      submitButton.disabled = true; // 送信ボタンを無効化
       try {
         const comment = sanitizeInput(document.getElementById('commentInput').value);
         const username = sanitizeInput(document.getElementById('usernameInput').value);
@@ -29,12 +32,17 @@
         });
         if (response.ok) {
           form.reset(); // フォームをリセット
-          loadComments(); // コメントを更新
+          commentSection.innerHTML = ''; // コメント表示エリアをクリア
+          displayedCommentIds.clear(); // 表示IDセットをクリア
+          lastRowLoaded = 0; // 初期状態にリセット
+          loadComments(); // コメントを再読み込み
         } else {
           throw new Error('Failed to post comment');
         }
       } catch (error) {
         alert('Error: ' + error.message);
+      } finally {
+        submitButton.disabled = false; // 送信ボタンを再度有効化
       }
     });
 
@@ -46,7 +54,10 @@
         }
         const comments = await response.json();
         comments.forEach(comment => {
-          displayComment(comment);
+          if (!displayedCommentIds.has(comment.id)) { // 既に表示されたIDをチェック
+            displayedCommentIds.add(comment.id);
+            displayComment(comment);
+          }
         });
         lastRowLoaded += comments.length;
       } catch (error) {
