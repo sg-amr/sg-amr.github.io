@@ -319,7 +319,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           throw new Error('Failed to post comment');
         }
       } catch (error) {
-        alert('Error: ' + error.message);
+        console.log("error");
       } finally {
         submitButton.disabled = false;
       }
@@ -340,7 +340,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
         lastRowLoaded += comments.length;
       } catch (error) {
-        alert('Error: ' + error.message);
+        console.log("error");
       }
     }
 
