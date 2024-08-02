@@ -494,7 +494,6 @@
   .bgimage{
     background-image: url("backgroundDesktop.jpeg");
     background-attachment: fixed;
-    position: fixed;
   }
 
 /* ボタン全体の外枠指定 */
