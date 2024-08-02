@@ -484,6 +484,7 @@
   .bgimage{
     background-image: url("backgroundMobile.jpeg");
     background-attachment: fixed;
+    position: fixed;
   }
 
  /* ボタン全体の外枠指定 */
