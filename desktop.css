@@ -494,6 +494,10 @@
   .bgimage{
     background-image: url("backgroundDesktop.jpeg");
     background-attachment: fixed;
+        position: fixed;
+        background-size: cover;
+        clip-path: inset(0 0 0 0);
+
   }
 
 /* ボタン全体の外枠指定 */
