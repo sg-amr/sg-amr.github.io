@@ -78,7 +78,72 @@ edit sport:
         }
     </script>
     <style>
-        /*Here is stylesheet*/
+        /*here is local stylesheet*/
+#commentForm {
+      background-color: #f9f9f9;
+      border: 1px solid #e0e0e0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    #commentForm input, #commentForm textarea, #commentForm button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #dddddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    #commentForm input, #commentForm textarea {
+      background-color: #ffffff;
+    }
+    #commentForm button {
+      background-color: #98c379;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #commentForm button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    #commentSection {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+margin-bottom: 100px
+    }
+    .comment {
+      border-bottom: 1px solid #e0e0e0;
+      padding: 10px 0;
+    }
+    .comment:last-child {
+      border-bottom: none;
+    }
+    .comment strong {
+      color: #333333;
+    }
+    .comment small {
+      color: #98c379;
+    }
+    .commentIntro h1{
+font-family: Arial, sans-serif;
+}
+.commentIntro{
+margin: 30px;
+padding: 20px;
+margin-top: 80px;
+}
+.commentIntro .attention{
+color: red;
+}
+
     </style>
 
     <!-- Google Tag Manager -->
@@ -150,8 +215,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="content">
         <!--Here is content. edit here!-->
-        <h1 class="wait">準備中です。しばらくお待ちください.....</h1>
-
+        <div class="commentIntro">
+        <h1>コメントシステム</h1>
+        <p>フィードバック・質問等も受け付けています。<br>ぜひお願いいたします。</p>
+        <p class="attention">※インターネットリテラシーに欠けるようなコメントはこちらから削除させていただきます。<br>ご了承ください。</p>
+        </div>
+        <form id="commentForm">
+            <input type="text" id="usernameInput" placeholder="Your name" required>
+            <textarea id="commentInput" placeholder="Your comment" required></textarea>
+            <button type="submit">Post Comment</button>
+          </form>
+          <div id="commentSection"></div>
 
     </div>
 
